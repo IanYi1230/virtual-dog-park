@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A friendly first step into the world of dogs. Meet the Beagle, Golden Retriever, and Poodle in our simple dog encyclopedia.">
+  <title>Virtual Dog Park — A happy place to learn about dogs</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Virtual Dog Park home">
+      <svg class="paw" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="10" cy="15" rx="5" ry="7" transform="rotate(-25 10 15)"/><ellipse cx="21" cy="10" rx="5" ry="7"/><ellipse cx="31" cy="16" rx="5" ry="7" transform="rotate(25 31 16)"/><path d="M10 29c0-5 6-12 11-12s11 7 11 12c0 8-8 4-11 4s-11 4-11-4Z"/></svg>
+      <span>virtual dog park<span class="brand-dot">.</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#encyclopedia">The encyclopedia <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="welcome-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="little-sun" aria-hidden="true">✳</span> A happy place for dog people</p>
+        <h1 id="welcome-title">New friends.<br>Four paws.<br><em>Endless curiosity.</em></h1>
+        <p class="welcome">Welcome to your little corner of the dog world. Get to know a few lovable breeds, one wag at a time.</p>
+        <a class="primary-button" href="#encyclopedia">Meet the dogs <span aria-hidden="true">↗</span></a>
+        <p class="hero-footnote"><span class="tiny-paw" aria-hidden="true">♥</span> No leash required. Just a little curiosity.</p>
+      </div>
+
+      <div class="park-scene" aria-hidden="true">
+        <div class="scene-sun"></div>
+        <span class="scene-cloud cloud-one"></span>
+        <span class="scene-cloud cloud-two"></span>
+        <div class="hill hill-back"></div>
+        <div class="hill hill-front"></div>
+        <span class="scene-note">good dogs. good company.</span>
+        <img class="park-dog park-poodle" src="assets/poodle.svg" alt="Illustration of a Poodle." width="320" height="280">
+        <img class="park-dog park-golden" src="assets/golden-retriever.svg" alt="Illustration of a Golden Retriever." width="320" height="280">
+        <img class="park-dog park-beagle" src="assets/beagle.svg" alt="Illustration of a Beagle." width="320" height="280">
+        <span class="flower flower-one">✳</span>
+        <span class="flower flower-two">✳</span>
+        <span class="grass grass-one"></span>
+        <span class="grass grass-two"></span>
+        <span class="park-sticker">ALL PAWS<br>WELCOME <span>♡</span></span>
+      </div>
+    </section>
+
+    <section class="encyclopedia" id="encyclopedia" aria-labelledby="encyclopedia-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A little field guide</p>
+          <h2 id="encyclopedia-title">Dog Encyclopedia<span class="heading-dot">.</span></h2>
+          <p>Three lovely breeds. A great place to start.</p>
+        </div>
+        <span class="breed-count">01 — 03 <span aria-hidden="true">↘</span></span>
+      </div>
+
+      <div class="dog-grid">
+        <article class="dog-card" id="beagle" tabindex="-1">
+          <div class="dog-art beagle-art">
+            <span class="card-number">01</span>
+            <span class="art-caption">the curious explorer</span>
+            <img src="assets/beagle.svg" alt="Illustration of a Beagle." width="320" height="280">
+            <span class="art-spark" aria-hidden="true">✧</span>
+          </div>
+          <div class="dog-details">
+            <div class="dog-title"><h3>Beagle</h3><span aria-hidden="true">↗</span></div>
+            <p class="dog-intro">A little nose for big adventures.</p>
+            <dl>
+              <div><dt>Size</dt><dd>Small to medium, with a sturdy build.</dd></div>
+              <div><dt>Personality</dt><dd>Curious, cheerful, and friendly. Loves following interesting smells.</dd></div>
+              <div><dt>Everyday care</dt><dd>Enjoy daily walks and sniffing games. Brush the short coat weekly and keep outdoor play in a secure area.</dd></div>
+            </dl>
+            <span class="trait-tag"><span aria-hidden="true">●</span> Always exploring</span>
+          </div>
+        </article>
+
+        <article class="dog-card" id="golden-retriever" tabindex="-1">
+          <div class="dog-art golden-art">
+            <span class="card-number">02</span>
+            <span class="art-caption">the sunshine friend</span>
+            <img src="assets/golden-retriever.svg" alt="Illustration of a Golden Retriever." width="320" height="280">
+            <span class="art-spark" aria-hidden="true">✳</span>
+          </div>
+          <div class="dog-details">
+            <div class="dog-title"><h3>Golden Retriever</h3><span aria-hidden="true">↗</span></div>
+            <p class="dog-intro">A big heart with a very waggy tail.</p>
+            <dl>
+              <div><dt>Size</dt><dd>Large, with a strong, active body.</dd></div>
+              <div><dt>Personality</dt><dd>Affectionate, playful, and eager to learn. Often enjoys being around people.</dd></div>
+              <div><dt>Everyday care</dt><dd>Make time for daily exercise and play. Brush the thick coat several times a week to manage loose hair.</dd></div>
+            </dl>
+            <span class="trait-tag"><span aria-hidden="true">●</span> Everybody’s buddy</span>
+          </div>
+        </article>
+
+        <article class="dog-card" id="poodle" tabindex="-1">
+          <div class="dog-art poodle-art">
+            <span class="card-number">03</span>
+            <span class="art-caption">the clever companion</span>
+            <img src="assets/poodle.svg" alt="Illustration of a Poodle." width="320" height="280">
+            <span class="art-spark" aria-hidden="true">✦</span>
+          </div>
+          <div class="dog-details">
+            <div class="dog-title"><h3>Poodle</h3><span aria-hidden="true">↗</span></div>
+            <p class="dog-intro">Curly coat. Bright mind. Lots of charm.</p>
+            <dl>
+              <div><dt>Size</dt><dd>Varies: Toy, Miniature, and Standard sizes.</dd></div>
+              <div><dt>Personality</dt><dd>Smart, lively, and attentive. Enjoys learning tricks and solving puzzles.</dd></div>
+              <div><dt>Everyday care</dt><dd>Offer daily walks and brain games. Brush the curly coat often and arrange regular grooming to prevent tangles.</dd></div>
+            </dl>
+            <span class="trait-tag"><span aria-hidden="true">●</span> Quick to learn</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="discovery" id="discovery" hidden>
+        <div><p class="discovery-title">Not sure who to meet first?</p><p id="discovery-message" role="status">Let a little luck introduce you.</p></div>
+        <button class="secondary-button" id="surprise-button" type="button">Pick a dog for me <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
+    <aside class="gentle-reminder">
+      <span class="reminder-flower" aria-hidden="true">✳</span>
+      <p><strong>Every dog is their own kind of wonderful.</strong><br>Breed traits are a starting point. Each dog has a personality all their own.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#">virtual dog park.</a>
+    <p>A little learning. A lot of love.</p>
+    <a href="#">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>
