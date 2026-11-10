@@ -112,6 +112,34 @@ dd { margin: 0; font-size: 13px; line-height: 1.7; color: #60665c; }
 .site-footer p, .site-footer > a:last-child { font-size: 11px; color: var(--muted); }
 .site-footer > a:last-child span { margin-left: 10px; }
 
+/* Adoption and care use the same colors and buttons as the encyclopedia. */
+.virtual-dog { margin-top: 38px; padding: 38px 0 0; border-top: 1px solid var(--line); }
+.adoption-form { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 22px; }
+.adoption-field { flex: 1 1 240px; min-width: 0; }
+.adoption-field label { display: block; margin-bottom: 7px; font-size: 14px; font-weight: 600; }
+.adoption-field input, .adoption-field select { width: 100%; min-height: 48px; padding: 10px 12px; border: 1px solid #858e7f; border-radius: 6px; background: #fffefa; color: var(--ink); font: inherit; }
+.adoption-field input[aria-invalid="true"] { border-color: #a13e30; }
+.adoption-form > button { margin-top: 29px; }
+.form-help { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+.name-error { margin: 6px 0 0; color: #a13e30; font-size: 14px; }
+.pet-panel { display: flex; align-items: center; gap: 30px; padding: 26px; border: 1px solid var(--line); border-radius: 10px; background: #eef0e5; }
+.pet-panel > img { width: 220px; }
+.pet-details { flex: 1; min-width: 0; }
+.pet-details h3 { overflow-wrap: anywhere; }
+.pet-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; margin: 23px 0; }
+.pet-stats > div { margin: 0; }
+.pet-stats dt { font-size: 11px; }
+.pet-stats dd { font-size: 16px; color: var(--ink); }
+.pet-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 760px) {
+  .adoption-form { flex-direction: column; gap: 18px; }
+  .adoption-field { flex: auto; width: 100%; }
+  .adoption-form > button { margin-top: 0; }
+  .pet-panel { flex-direction: column; align-items: stretch; gap: 15px; padding: 22px; }
+  .pet-panel > img { align-self: center; }
+}
+
 /* Stack the cards and welcome section when the screen gets smaller. */
 @media (max-width: 1000px) {
   .site-header, main, .site-footer { width: calc(100% - 64px); }

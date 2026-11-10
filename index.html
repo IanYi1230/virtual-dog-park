@@ -124,6 +124,54 @@
       </div>
     </section>
 
+    <section class="virtual-dog" id="my-virtual-dog" aria-labelledby="virtual-dog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Your own park companion</p>
+          <h2 id="virtual-dog-title">My Virtual Dog<span class="heading-dot">.</span></h2>
+          <p>Choose a friend, give them a name, and make their day.</p>
+        </div>
+      </div>
+
+      <form class="adoption-form" id="adoption-form" novalidate>
+        <div class="adoption-field">
+          <label for="dog-breed">Dog breed</label>
+          <select id="dog-breed" name="breed">
+            <option value="Beagle">Beagle</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="Poodle">Poodle</option>
+          </select>
+        </div>
+        <div class="adoption-field">
+          <label for="dog-name">Dog name</label>
+          <input id="dog-name" name="dog-name" type="text" maxlength="20" required aria-describedby="dog-name-help name-error">
+          <p class="form-help" id="dog-name-help">Up to 20 characters. Spaces inside the name are welcome.</p>
+          <p class="name-error" id="name-error" role="alert"></p>
+        </div>
+        <button class="primary-button" type="submit">Adopt <span aria-hidden="true">♡</span></button>
+      </form>
+      <noscript><p>Please enable JavaScript to adopt and care for a virtual dog.</p></noscript>
+
+      <div class="pet-panel" id="pet-panel" hidden>
+        <img id="pet-image" src="assets/beagle.svg" alt="Illustration of a Beagle." width="320" height="280">
+        <div class="pet-details">
+          <h3 id="pet-name" tabindex="-1"></h3>
+          <dl class="pet-stats">
+            <div><dt>Breed</dt><dd id="pet-breed"></dd></div>
+            <div><dt>Day</dt><dd id="pet-day"></dd></div>
+            <div><dt>Growth stage</dt><dd id="pet-stage"></dd></div>
+            <div><dt>Happiness</dt><dd><span id="pet-happiness"></span> / 100</dd></div>
+          </dl>
+          <div class="pet-actions">
+            <button class="secondary-button" id="feed-button" type="button">Feed</button>
+            <button class="secondary-button" id="play-button" type="button">Play</button>
+          </div>
+          <p class="form-help" id="pet-message" role="status"></p>
+        </div>
+      </div>
+      <p class="form-help">Your dog stays with you until you refresh or close this page.</p>
+    </section>
+
     <aside class="gentle-reminder">
       <span class="reminder-flower" aria-hidden="true">✳</span>
       <p><strong>Every dog is their own kind of wonderful.</strong><br>Breed traits are a starting point. Each dog has a personality all their own.</p>

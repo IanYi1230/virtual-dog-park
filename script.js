@@ -28,3 +28,75 @@ surpriseButton.addEventListener('click', function () {
   chosenCard.focus({ preventScroll: true });
   chosenCard.scrollIntoView({ block: 'start' });
 });
+
+// Keep the adopted dog's information together in one simple object.
+let virtualDog = null;
+const adoptionForm = document.querySelector('#adoption-form');
+const nameInput = document.querySelector('#dog-name');
+const breedInput = document.querySelector('#dog-breed');
+const nameError = document.querySelector('#name-error');
+const petMessage = document.querySelector('#pet-message');
+const breedImages = {
+  'Beagle': 'assets/beagle.svg',
+  'Golden Retriever': 'assets/golden-retriever.svg',
+  'Poodle': 'assets/poodle.svg'
+};
+
+function adoptDog(event) {
+  event.preventDefault();
+  const name = nameInput.value.trim();
+
+  if (name.length === 0 || name.length > 20) {
+    nameError.textContent = name.length === 0
+      ? 'Please enter a dog name, not just spaces.'
+      : 'Please use a dog name with 20 characters or fewer.';
+    nameInput.setAttribute('aria-invalid', 'true');
+    nameInput.focus();
+    return;
+  }
+
+  nameError.textContent = '';
+  nameInput.removeAttribute('aria-invalid');
+  virtualDog = {
+    name: name,
+    breed: breedInput.value,
+    day: 1,
+    growthStage: 'Puppy',
+    happiness: 50
+  };
+
+  updateDogDisplay();
+  adoptionForm.hidden = true;
+  document.querySelector('#pet-panel').hidden = false;
+  petMessage.textContent = 'Welcome to the park! Feed or play to add 10 happiness.';
+  document.querySelector('#pet-name').focus();
+}
+
+function updateDogDisplay() {
+  // textContent displays names literally, even if they contain HTML characters.
+  document.querySelector('#pet-name').textContent = virtualDog.name;
+  document.querySelector('#pet-breed').textContent = virtualDog.breed;
+  document.querySelector('#pet-day').textContent = virtualDog.day;
+  document.querySelector('#pet-stage').textContent = virtualDog.growthStage;
+  document.querySelector('#pet-happiness').textContent = virtualDog.happiness;
+  const petImage = document.querySelector('#pet-image');
+  petImage.src = breedImages[virtualDog.breed];
+  petImage.alt = 'Illustration of a ' + virtualDog.breed + '.';
+}
+
+function increaseHappiness() {
+  if (virtualDog === null) {
+    return;
+  }
+
+  // Math.min chooses the smaller number, so happiness cannot go above 100.
+  virtualDog.happiness = Math.min(100, virtualDog.happiness + 10);
+  updateDogDisplay();
+  petMessage.textContent = virtualDog.happiness === 100
+    ? 'Happiness is 100 / 100. Your dog is as happy as can be!'
+    : 'Your dog enjoyed that! Happiness is now ' + virtualDog.happiness + ' / 100.';
+}
+
+adoptionForm.addEventListener('submit', adoptDog);
+document.querySelector('#feed-button').addEventListener('click', increaseHappiness);
+document.querySelector('#play-button').addEventListener('click', increaseHappiness);
