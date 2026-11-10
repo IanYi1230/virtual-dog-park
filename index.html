@@ -162,14 +162,19 @@
             <div><dt>Growth stage</dt><dd id="pet-stage"></dd></div>
             <div><dt>Happiness</dt><dd><span id="pet-happiness"></span> / 100</dd></div>
           </dl>
+          <label class="growth-label" for="pet-growth">Growth toward adulthood</label>
+          <progress id="pet-growth" max="4" value="1" aria-describedby="growth-help pet-stage">1 / 4</progress>
+          <p class="form-help" id="growth-help">Puppy on Day 1 · Young Dog on Days 2–3 · Adult Dog from Day 4</p>
           <div class="pet-actions">
             <button class="secondary-button" id="feed-button" type="button">Feed</button>
             <button class="secondary-button" id="play-button" type="button">Play</button>
+            <button class="secondary-button" id="next-day-button" type="button">Next Day</button>
+            <button class="secondary-button" id="start-over-button" type="button">Start Over</button>
           </div>
           <p class="form-help" id="pet-message" role="status"></p>
         </div>
       </div>
-      <p class="form-help">Your dog stays with you until you refresh or close this page.</p>
+      <p class="form-help" id="storage-message" role="status">Progress is saved automatically in this browser on this device.</p>
     </section>
 
     <aside class="gentle-reminder">
